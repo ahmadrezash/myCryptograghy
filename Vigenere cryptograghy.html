@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+<html>
+<head><meta charset="utf-8" />
 
 <title>Vigenere cryptograghy</title>
 
-<script src="Vigenere%20cryptograghy_files/require.js"></script>
-<script src="Vigenere%20cryptograghy_files/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
 
@@ -13085,13 +13085,13 @@ div#notebook {
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="Vigenere%20cryptograghy_files/custom.css">
+<link rel="stylesheet" href="custom.css">
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="Vigenere%20cryptograghy_files/MathJax.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config;executed=true">
+    <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -13108,110 +13108,30 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
-.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
-.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
-.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
-.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
-</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-#MathJax_About.MathJax_MousePost {outline: none}
-.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-.MathJax_MenuItem {padding: 1px 2em; background: transparent}
-.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
-.MathJax_MenuActive .MathJax_MenuArrow {color: white}
-.MathJax_MenuArrow.RTL {left: .5em; right: auto}
-.MathJax_MenuCheck {position: absolute; left: .7em}
-.MathJax_MenuCheck.RTL {right: .7em; left: auto}
-.MathJax_MenuRadioCheck {position: absolute; left: .7em}
-.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
-.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
-.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
-.MathJax_MenuDisabled {color: GrayText}
-.MathJax_MenuActive {background-color: #606872; color: white}
-.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
-.MathJax_ContextMenu:focus {outline: none}
-.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
-#MathJax_AboutClose {top: .2em; right: .2em}
-.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
-.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
-.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
-.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
-.MathJax_MenuClose:hover span {background-color: #CCC!important}
-.MathJax_MenuClose:hover:focus {outline: none}
-</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
-</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
-.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
-</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
-#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
-#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
-</style><style type="text/css">.MathJax_Preview {color: #888}
-#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
-#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
-.MathJax_Error {color: #CC0000; font-style: italic}
-</style><style type="text/css">.MJXp-script {font-size: .8em}
-.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
-.MJXp-bold {font-weight: bold}
-.MJXp-italic {font-style: italic}
-.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-largeop {font-size: 150%}
-.MJXp-largeop.MJXp-int {vertical-align: -.2em}
-.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
-.MJXp-display {display: block; text-align: center; margin: 1em 0}
-.MJXp-math span {display: inline-block}
-.MJXp-box {display: block!important; text-align: center}
-.MJXp-box:after {content: " "}
-.MJXp-rule {display: block!important; margin-top: .1em}
-.MJXp-char {display: block!important}
-.MJXp-mo {margin: 0 .15em}
-.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
-.MJXp-denom {display: inline-table!important; width: 100%}
-.MJXp-denom > * {display: table-row!important}
-.MJXp-surd {vertical-align: top}
-.MJXp-surd > * {display: block!important}
-.MJXp-script-box > *  {display: table!important; height: 50%}
-.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
-.MJXp-script-box > *:last-child > * {vertical-align: bottom}
-.MJXp-script-box > * > * > * {display: block!important}
-.MJXp-mphantom {visibility: hidden}
-.MJXp-munderover {display: inline-table!important}
-.MJXp-over {display: inline-block!important; text-align: center}
-.MJXp-over > * {display: block!important}
-.MJXp-munderover > * {display: table-row!important}
-.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
-.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
-.MJXp-mtr {display: table-row!important}
-.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
-.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
-.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
-.MJXp-mlabeledtr {display: table-row!important}
-.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
-.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
-.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
-.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
-.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
-.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
-.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
-.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
-.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
-.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
-.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
-.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
-.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
-.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
-</style></head>
-<body><div id="MathJax_Message" style="display: none;"></div>
+    <!-- End of mathjax configuration --></head>
+<body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Start">Start<a class="anchor-link" href="#Start">¶</a></h1>
+<h1 id="-&gt;Shahid-Beheshti-University&lt;-">-&gt;Shahid Beheshti University&lt;-<a class="anchor-link" href="#-&gt;Shahid-Beheshti-University&lt;-">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ahmadreza Sharifianzade &amp; Seyyed Mohsen Sajjadi</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Start">Start<a class="anchor-link" href="#Start">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -13246,7 +13166,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Encryption-Function">Encryption Function<a class="anchor-link" href="#Encryption-Function">¶</a></h2>
+<h2 id="Encryption-Function">Encryption Function<a class="anchor-link" href="#Encryption-Function">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13264,12 +13184,12 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">plainText</span><span class="p">,</span><span class="n">key</span><span class="p">):</span>
-    <span class="n">cipherText</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">cipherText</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">plainText</span><span class="p">)</span>
     <span class="n">nk</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>   
         <span class="n">shifted</span> <span class="o">=</span> <span class="n">index_char</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span><span class="o">%</span><span class="k">nk</span>]) + index_char(plainText[i])
-<span class="c1">#     print( (plainText[i])  , '+', key[i%nk] ,'=', get_char( shifted if shifted &lt;= 26 else shifted-26 ))</span>
+<span class="c1">#     print( (plainText[i])  , &#39;+&#39;, key[i%nk] ,&#39;=&#39;, get_char( shifted if shifted &lt;= 26 else shifted-26 ))</span>
         <span class="n">cipherText</span> <span class="o">+=</span> <span class="n">get_char</span><span class="p">(</span> <span class="n">shifted</span> <span class="k">if</span> <span class="n">shifted</span> <span class="o">&lt;=</span> <span class="mi">26</span> <span class="k">else</span> <span class="n">shifted</span><span class="o">-</span><span class="mi">26</span> <span class="p">)</span>
     <span class="k">return</span> <span class="n">cipherText</span>
 </pre></div>
@@ -13282,7 +13202,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Decryption-Function">Decryption Function<a class="anchor-link" href="#Decryption-Function">¶</a></h2>
+<h2 id="Decryption-Function">Decryption Function<a class="anchor-link" href="#Decryption-Function">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13300,13 +13220,13 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">decrypt</span><span class="p">(</span><span class="n">cipherText</span><span class="p">,</span><span class="n">key</span><span class="p">):</span>
-    <span class="n">plainText</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">plainText</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cipherText</span><span class="p">)</span>
     <span class="n">nk</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>   
     	<span class="n">newchar</span> <span class="o">=</span> <span class="o">-</span><span class="n">index_char</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span><span class="o">%</span><span class="k">nk</span>]) + index_char(cipherText[i])
     	<span class="n">shiftBack</span> <span class="o">=</span> <span class="n">newchar</span> <span class="k">if</span> <span class="n">newchar</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">newchar</span> <span class="o">+</span> <span class="mi">26</span>
-	<span class="c1">#print(cipherText[i] , '-' , key[i%nk] , '=',get_char(shiftBack))</span>
+	<span class="c1">#print(cipherText[i] , &#39;-&#39; , key[i%nk] , &#39;=&#39;,get_char(shiftBack))</span>
     	<span class="n">plainText</span> <span class="o">+=</span> <span class="n">get_char</span><span class="p">(</span><span class="n">shiftBack</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">plainText</span>
 </pre></div>
@@ -13340,7 +13260,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Attacking-on-the-ciphering">Attacking on the ciphering<a class="anchor-link" href="#Attacking-on-the-ciphering">¶</a></h1>
+<h1 id="Attacking-on-the-ciphering">Attacking on the ciphering<a class="anchor-link" href="#Attacking-on-the-ciphering">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -13359,11 +13279,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[223]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">'Oliphant left the Cavendish Laboratory in 1937 to become the Poynting Professor of Physics at the University of Birmingham. He attempted to build a 60-inch (150 cm) cyclotron at the university, but its completion was postponed by the outbreak of the Second World War in Europe in 1939. He became involved with the development of radar, heading a group at the University of Birmingham that included John Randall and Harry Boot. They created a radical new design, the cavity magnetron, that made microwave radar possible. Oliphant also formed part of the MAUD Committee, which reported in July 1941, that an atomic bomb was not only feasible, but might be produced as early as 1943. Oliphant was instrumental in spreading the word of this finding in the United States, thereby starting what became the Manhattan Project. Later in the war, he worked on it with his friend Ernest Lawrence at the Radiation Laboratory in Berkeley, California, developing electromagnetic isotope separation, which provided the fissile component of the Little Boy atomic bomb used in the atomic bombing of Hiroshima in August 1945.After the war, Oliphant returned to Australia as the first Director of the Research School of Physical Sciences and Engineering at the new Australian National University (ANU), where he initiated the design and construction of the worlds largest (500 megajoule) homopolar generator. He retired in 1967, but was appointed Governor of South Australia on the advice of Premier, Don Dunstan. He assisted in the founding of the Australian Democrats political party, and he was the chairman of the meeting in Melbourne in 1977 at which the party was launched. Late in life he watched his wife, Rosa, suffer before her death in 1987, and he became an advocate for voluntary euthanasia. He died in Canberra in 2000.Oliphant left the Cavendish Laboratory in 1937 to become the Poynting Professor of Physics at the University of Birmingham. He attempted to build a 60-inch (150 cm) cyclotron at the university, but its completion was postponed by the outbreak of the Second World War in Europe in 1939. He became involved with the development of radar, heading a group at the University of Birmingham that included John Randall and Harry Boot. They created a radical new design, the cavity magnetron, that made microwave radar possible. Oliphant also formed part of the MAUD Committee, which reported in July 1941, that an atomic bomb was not only feasible, but might be produced as early as 1943. Oliphant was instrumental in spreading the word of this finding in the United States, thereby starting what became the Manhattan Project. Later in the war, he worked on it with his friend Ernest Lawrence at the Radiation Laboratory in Berkeley, California, developing electromagnetic isotope separation, which provided the fissile component of the Little Boy atomic bomb used in the atomic bombing of Hiroshima in August 1945.After the war, Oliphant returned to Australia as the first Director of the Research School of Physical Sciences and Engineering at the new Australian National University (ANU), where he initiated the design and construction of the worlds largest (500 megajoule) homopolar generator. He retired in 1967, but was appointed Governor of South Australia on the advice of Premier, Don Dunstan. He assisted in the founding of the Australian Democrats political party, and he was the chairman of the meeting in Melbourne in 1977 at which the party was launched. Late in life he watched his wife, Rosa, suffer before her death in 1987, and he became an advocate for voluntary euthanasia. He died in Canberra in 2000. '</span>
-<span class="n">t</span><span class="o">=</span><span class="s1">''</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Oliphant left the Cavendish Laboratory in 1937 to become the Poynting Professor of Physics at the University of Birmingham. He attempted to build a 60-inch (150 cm) cyclotron at the university, but its completion was postponed by the outbreak of the Second World War in Europe in 1939. He became involved with the development of radar, heading a group at the University of Birmingham that included John Randall and Harry Boot. They created a radical new design, the cavity magnetron, that made microwave radar possible. Oliphant also formed part of the MAUD Committee, which reported in July 1941, that an atomic bomb was not only feasible, but might be produced as early as 1943. Oliphant was instrumental in spreading the word of this finding in the United States, thereby starting what became the Manhattan Project. Later in the war, he worked on it with his friend Ernest Lawrence at the Radiation Laboratory in Berkeley, California, developing electromagnetic isotope separation, which provided the fissile component of the Little Boy atomic bomb used in the atomic bombing of Hiroshima in August 1945.After the war, Oliphant returned to Australia as the first Director of the Research School of Physical Sciences and Engineering at the new Australian National University (ANU), where he initiated the design and construction of the worlds largest (500 megajoule) homopolar generator. He retired in 1967, but was appointed Governor of South Australia on the advice of Premier, Don Dunstan. He assisted in the founding of the Australian Democrats political party, and he was the chairman of the meeting in Melbourne in 1977 at which the party was launched. Late in life he watched his wife, Rosa, suffer before her death in 1987, and he became an advocate for voluntary euthanasia. He died in Canberra in 2000.Oliphant left the Cavendish Laboratory in 1937 to become the Poynting Professor of Physics at the University of Birmingham. He attempted to build a 60-inch (150 cm) cyclotron at the university, but its completion was postponed by the outbreak of the Second World War in Europe in 1939. He became involved with the development of radar, heading a group at the University of Birmingham that included John Randall and Harry Boot. They created a radical new design, the cavity magnetron, that made microwave radar possible. Oliphant also formed part of the MAUD Committee, which reported in July 1941, that an atomic bomb was not only feasible, but might be produced as early as 1943. Oliphant was instrumental in spreading the word of this finding in the United States, thereby starting what became the Manhattan Project. Later in the war, he worked on it with his friend Ernest Lawrence at the Radiation Laboratory in Berkeley, California, developing electromagnetic isotope separation, which provided the fissile component of the Little Boy atomic bomb used in the atomic bombing of Hiroshima in August 1945.After the war, Oliphant returned to Australia as the first Director of the Research School of Physical Sciences and Engineering at the new Australian National University (ANU), where he initiated the design and construction of the worlds largest (500 megajoule) homopolar generator. He retired in 1967, but was appointed Governor of South Australia on the advice of Premier, Don Dunstan. He assisted in the founding of the Australian Democrats political party, and he was the chairman of the meeting in Melbourne in 1977 at which the party was launched. Late in life he watched his wife, Rosa, suffer before her death in 1987, and he became an advocate for voluntary euthanasia. He died in Canberra in 2000. &#39;</span>
+<span class="n">t</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">):</span>
     <span class="n">t</span><span class="o">+=</span><span class="n">i</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-<span class="n">k</span> <span class="o">=</span> <span class="s1">'salamsalam'</span>
+<span class="n">k</span> <span class="o">=</span> <span class="s1">&#39;salamsalam&#39;</span>
 <span class="n">ciphered</span> <span class="o">=</span> <span class="n">encrypt</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
 </pre></div>
 
@@ -13405,7 +13325,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>'ptvqlsstmfngulwhawfvqjwzqacpznusjdio2A@8xggedpurulwuozobvokhwogfafpvgkpizavdwsytifcajzwwsjugbgfawmjooubq@mebubrntljdupjhjpvfP1.qadl:6O1du6dcuqouswabxlmevoqifvkntz-jhumlxcpnxyfxatnxbacpwluooflozxzjovujefectfuimffggsdxpzyeaswiofceptwnn2:;F/lwgedburjrntlwfljjxzyhfemifpgumfobbgvsias-prbhasgbhzbvtsytifcajzwwsjugbgfawmjooubqlmaujvpmyvjdkppasefiammiaelswrzcwbu2lmezdzrbxwiasblvdedsexemfjkf1tifknwmldmbhvruvgsFuiignevjmjdzbxenjrbeieqskxicmm;ppauhbobnmwgkosnmqqejyoguprnemicpnuvuxwjFxiqpivwuosumqjrbzlz2AA20lmaubvnusenccpuoxeksoupvyzjwfsjctr-fmymjhpgcihwoevkreekjasmgnt5K9M/ptvqlsstxbavowlwunfvgbpassqsmnemfltifebshgktijasjrvnnhjvgiimsiuflfueljs-uprsitdsubzgjrybhbujrdeejtifunolsytboxepnwht/migfvastifens0zjwpssresfntxjbuimkkrjfvqfvfjsumijsifhebubufvsiibuqbopsgosbbbscasbfssrmiq1cbmqspvfna-emifpguiohmyfglwonboafxahitpbbqikjpbsigjsf1wijkuqvgaieflgiixnstjtrdseuoofvgpjlmemjbgmittybuwzjgttmcvaremfyhfbbbnmugoncqahsxmispaujqsnnbvohtxC&gt;N6/isuijyhfxie-sdnpibvgsilzroflgpemxtsbtvbekyhfgqetxvnrfdbbssxyhfsmffejhhtdpbppgkpizavdedxcjfvpfwssdfoovoiwwiohigulwsexbcfuvsqibovnumgsamvvvwijxiuz0noy;1wifzriiasiujigfhlmeefavhrssddpvfuvmhtjpvbgxzjwpstqtpswgftb564Brehbrbvpw.hpnwcppswgfomebxgwHifzrumjjdjo9F7;&gt;guuxifbthtioumqhsnjropzbgwgztibcfuvsqibpvgiisivjdmbgtjjmjfz9esfiuotbno2zjattqfuivnnuimspyfiiohwsulwfutuznmmssdfnwpselxppmqgjgsqpbsbl-efihfxifulwhhbjzzbrgktifurfxasgjourmfgzrofqa2=I&lt;auxpvdllmeqbzgzasxlbvvpiiv3lbumvopakeifenugzjdijajjjw1rpti9tyxkescmspvwmesemnulasK:9?9brvmecfknnissaewwpbxwkoswwyvrlfrzfcgieffsjb6ufhajdjoknofwwrbjv?14B3omjxubrlqegubufgsaeoeqfipsgosbbbscasK:4?gpfwhonfbuftgdnujvtqvgkettwepjhmytjkfbxlmevoqifvkntzpnojvennhiiz/lwftufucuivyocvqyeeH5Gjoku)5G5cn*kldpgyrpoigulwznjwmetmldFcvbvuwutmqmmgjsfbatqwfutgseecggiigztcsmnlsxyhftmpprvbosmljbvasevswcfmf6S4:6uffwhanfqawsdaeexqgixzjdfwmyptejnupnebhswFifiqjryfgspccbxlmevoqifvkntzpnojvennhiizulsyiodtheivooioznohsqlbolubvjdbppb;ulwdcsfigfhswaejknmrwbdftqto0lmedbdvucefgofbepr&gt;yhbuuneiencspenwijfdbsxbtwaglf/wyjtzfnubtfpjgwmfexnsxgktifunvhutmnjbgfi&gt;bhjdpeftgwtfeqakyddK:599ulsyaobbbnmugoncentrgyoomgsfeknbmf4ovxengiujrqvgiudflntiswlzba&gt;:8E3omjxubrlbatjvfuvmreouiyjrkurfblvoklmexpzqpjlmitgqaemfliouprvrayeetbnuik1tifzrcckyasuqahazftcfknnilmenbvubxlfnqswwfgl3lbumejrlmexbz9iiotrlflbomlbiuipvtjjneoemeoikylbxzrogwftuimebhaftjpvybfgwaupzljrtjrlftrz0ufljgweoms1dfwmyptasgfmmpuvgrahomgjgaxoupxrtihfrbuqbo0omidixepzaieeuprgmkximfkbntgseouwsulwqiuutrcsqftpnqpcsegutflvoxzjaupuvdfgrbjoobglawotiqzbmffuhvag2=F:Hbgbrsxzjwbs4bmmhmaouzruyjseeuwnvwlwamjintxzjfjsagemjjcupzbgxzjrftmnsgzxcipwypjhmytjknmwuneodmfbrvjnhjvrfvasgbubufrwbavtbebpafnobbvprsquojdrswayy)bvh*0omesfprjrayibumqulwietjoabrvhootbevglnoopngiiotrmeaybvyjsu)==1qwlakpcyf-ztmpqwybvyjnfsigpv@mesfbvsivnn2:&gt;D-fmywbticqsastfeobwijsospnfpylmavtbebpafoouprbhnncfpncsienes-lbohmssubv;iisxsjtbremfyhfgwhohasgpgbufemxtsbtvbrvjmpdznuwhtljuqpbphfruz4nohzjwbtbufgzfisniapjlmenfmgjrynnnftopyjsejo9F8;sywijkuulwuasugjbwdfuodpre2dftfjvyjjwmexbbpiivmitxqsf0jtsb-ahgjwwbfgweflwwdfbbujrC&gt;R8-iaelwgedburbrsivpdigfjgwvpmcauejdevupnoekna/imqjivnndbvofvjfio38=12'</pre>
+<pre>&#39;ptvqlsstmfngulwhawfvqjwzqacpznusjdio2A@8xggedpurulwuozobvokhwogfafpvgkpizavdwsytifcajzwwsjugbgfawmjooubq@mebubrntljdupjhjpvfP1.qadl:6O1du6dcuqouswabxlmevoqifvkntz-jhumlxcpnxyfxatnxbacpwluooflozxzjovujefectfuimffggsdxpzyeaswiofceptwnn2:;F/lwgedburjrntlwfljjxzyhfemifpgumfobbgvsias-prbhasgbhzbvtsytifcajzwwsjugbgfawmjooubqlmaujvpmyvjdkppasefiammiaelswrzcwbu2lmezdzrbxwiasblvdedsexemfjkf1tifknwmldmbhvruvgsFuiignevjmjdzbxenjrbeieqskxicmm;ppauhbobnmwgkosnmqqejyoguprnemicpnuvuxwjFxiqpivwuosumqjrbzlz2AA20lmaubvnusenccpuoxeksoupvyzjwfsjctr-fmymjhpgcihwoevkreekjasmgnt5K9M/ptvqlsstxbavowlwunfvgbpassqsmnemfltifebshgktijasjrvnnhjvgiimsiuflfueljs-uprsitdsubzgjrybhbujrdeejtifunolsytboxepnwht/migfvastifens0zjwpssresfntxjbuimkkrjfvqfvfjsumijsifhebubufvsiibuqbopsgosbbbscasbfssrmiq1cbmqspvfna-emifpguiohmyfglwonboafxahitpbbqikjpbsigjsf1wijkuqvgaieflgiixnstjtrdseuoofvgpjlmemjbgmittybuwzjgttmcvaremfyhfbbbnmugoncqahsxmispaujqsnnbvohtxC&gt;N6/isuijyhfxie-sdnpibvgsilzroflgpemxtsbtvbekyhfgqetxvnrfdbbssxyhfsmffejhhtdpbppgkpizavdedxcjfvpfwssdfoovoiwwiohigulwsexbcfuvsqibovnumgsamvvvwijxiuz0noy;1wifzriiasiujigfhlmeefavhrssddpvfuvmhtjpvbgxzjwpstqtpswgftb564Brehbrbvpw.hpnwcppswgfomebxgwHifzrumjjdjo9F7;&gt;guuxifbthtioumqhsnjropzbgwgztibcfuvsqibpvgiisivjdmbgtjjmjfz9esfiuotbno2zjattqfuivnnuimspyfiiohwsulwfutuznmmssdfnwpselxppmqgjgsqpbsbl-efihfxifulwhhbjzzbrgktifurfxasgjourmfgzrofqa2=I&lt;auxpvdllmeqbzgzasxlbvvpiiv3lbumvopakeifenugzjdijajjjw1rpti9tyxkescmspvwmesemnulasK:9?9brvmecfknnissaewwpbxwkoswwyvrlfrzfcgieffsjb6ufhajdjoknofwwrbjv?14B3omjxubrlqegubufgsaeoeqfipsgosbbbscasK:4?gpfwhonfbuftgdnujvtqvgkettwepjhmytjkfbxlmevoqifvkntzpnojvennhiiz/lwftufucuivyocvqyeeH5Gjoku)5G5cn*kldpgyrpoigulwznjwmetmldFcvbvuwutmqmmgjsfbatqwfutgseecggiigztcsmnlsxyhftmpprvbosmljbvasevswcfmf6S4:6uffwhanfqawsdaeexqgixzjdfwmyptejnupnebhswFifiqjryfgspccbxlmevoqifvkntzpnojvennhiizulsyiodtheivooioznohsqlbolubvjdbppb;ulwdcsfigfhswaejknmrwbdftqto0lmedbdvucefgofbepr&gt;yhbuuneiencspenwijfdbsxbtwaglf/wyjtzfnubtfpjgwmfexnsxgktifunvhutmnjbgfi&gt;bhjdpeftgwtfeqakyddK:599ulsyaobbbnmugoncentrgyoomgsfeknbmf4ovxengiujrqvgiudflntiswlzba&gt;:8E3omjxubrlbatjvfuvmreouiyjrkurfblvoklmexpzqpjlmitgqaemfliouprvrayeetbnuik1tifzrcckyasuqahazftcfknnilmenbvubxlfnqswwfgl3lbumejrlmexbz9iiotrlflbomlbiuipvtjjneoemeoikylbxzrogwftuimebhaftjpvybfgwaupzljrtjrlftrz0ufljgweoms1dfwmyptasgfmmpuvgrahomgjgaxoupxrtihfrbuqbo0omidixepzaieeuprgmkximfkbntgseouwsulwqiuutrcsqftpnqpcsegutflvoxzjaupuvdfgrbjoobglawotiqzbmffuhvag2=F:Hbgbrsxzjwbs4bmmhmaouzruyjseeuwnvwlwamjintxzjfjsagemjjcupzbgxzjrftmnsgzxcipwypjhmytjknmwuneodmfbrvjnhjvrfvasgbubufrwbavtbebpafnobbvprsquojdrswayy)bvh*0omesfprjrayibumqulwietjoabrvhootbevglnoopngiiotrmeaybvyjsu)==1qwlakpcyf-ztmpqwybvyjnfsigpv@mesfbvsivnn2:&gt;D-fmywbticqsastfeobwijsospnfpylmavtbebpafoouprbhnncfpncsienes-lbohmssubv;iisxsjtbremfyhfgwhohasgpgbufemxtsbtvbrvjmpdznuwhtljuqpbphfruz4nohzjwbtbufgzfisniapjlmenfmgjrynnnftopyjsejo9F8;sywijkuulwuasugjbwdfuodpre2dftfjvyjjwmexbbpiivmitxqsf0jtsb-ahgjwwbfgweflwwdfbbujrC&gt;R8-iaelwgedburbrsivpdigfjgwvpmcauejdevupnoekna/imqjivnndbvofvjfio38=12&#39;</pre>
 </div>
 
 </div>
@@ -13436,7 +13356,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1--finding-len-of-key">1- finding len of key<a class="anchor-link" href="#1--finding-len-of-key">¶</a></h3>
+<h3 id="1--finding-len-of-key">1- finding len of key<a class="anchor-link" href="#1--finding-len-of-key">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13542,7 +13462,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2--finding-characters-of-key">2- finding characters of key<a class="anchor-link" href="#2--finding-characters-of-key">¶</a></h3>
+<h3 id="2--finding-characters-of-key">2- finding characters of key<a class="anchor-link" href="#2--finding-characters-of-key">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13560,32 +13480,32 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">freq</span> <span class="o">=</span> <span class="p">{</span>
-<span class="s1">'a'</span><span class="p">:</span><span class="mf">0.081</span><span class="p">,</span>
-<span class="s1">'b'</span><span class="p">:</span><span class="mf">0.014</span><span class="p">,</span>
-<span class="s1">'c'</span><span class="p">:</span><span class="mf">0.027</span><span class="p">,</span>
-<span class="s1">'d'</span><span class="p">:</span><span class="mf">0.042</span><span class="p">,</span>
-<span class="s1">'e'</span><span class="p">:</span><span class="mf">0.127</span><span class="p">,</span>
-<span class="s1">'f'</span><span class="p">:</span><span class="mf">0.022</span><span class="p">,</span>    
-<span class="s1">'g'</span><span class="p">:</span><span class="mf">0.020</span><span class="p">,</span>
-<span class="s1">'h'</span><span class="p">:</span><span class="mf">0.060</span><span class="p">,</span>
-<span class="s1">'i'</span><span class="p">:</span><span class="mf">0.069</span><span class="p">,</span>
-<span class="s1">'j'</span><span class="p">:</span><span class="mf">0.001</span><span class="p">,</span>
-<span class="s1">'k'</span><span class="p">:</span><span class="mf">0.007</span><span class="p">,</span>
-<span class="s1">'l'</span><span class="p">:</span><span class="mf">0.040</span><span class="p">,</span>
-<span class="s1">'m'</span><span class="p">:</span><span class="mf">0.024</span><span class="p">,</span>
-<span class="s1">'n'</span><span class="p">:</span><span class="mf">0.067</span><span class="p">,</span>
-<span class="s1">'o'</span><span class="p">:</span><span class="mf">0.075</span><span class="p">,</span>
-<span class="s1">'p'</span><span class="p">:</span><span class="mf">0.019</span><span class="p">,</span>
-<span class="s1">'q'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
-<span class="s1">'r'</span><span class="p">:</span><span class="mf">0.059</span><span class="p">,</span>
-<span class="s1">'s'</span><span class="p">:</span><span class="mf">0.063</span><span class="p">,</span>
-<span class="s1">'t'</span><span class="p">:</span><span class="mf">0.090</span><span class="p">,</span>
-<span class="s1">'u'</span><span class="p">:</span><span class="mf">0.027</span><span class="p">,</span>
-<span class="s1">'v'</span><span class="p">:</span><span class="mf">0.009</span><span class="p">,</span>
-<span class="s1">'w'</span><span class="p">:</span><span class="mf">0.023</span><span class="p">,</span>
-<span class="s1">'x'</span><span class="p">:</span><span class="mf">0.001</span><span class="p">,</span>
-<span class="s1">'y'</span><span class="p">:</span><span class="mf">0.019</span><span class="p">,</span>
-<span class="s1">'z'</span><span class="p">:</span><span class="mf">0.00</span><span class="p">,</span>
+<span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mf">0.081</span><span class="p">,</span>
+<span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mf">0.014</span><span class="p">,</span>
+<span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="mf">0.027</span><span class="p">,</span>
+<span class="s1">&#39;d&#39;</span><span class="p">:</span><span class="mf">0.042</span><span class="p">,</span>
+<span class="s1">&#39;e&#39;</span><span class="p">:</span><span class="mf">0.127</span><span class="p">,</span>
+<span class="s1">&#39;f&#39;</span><span class="p">:</span><span class="mf">0.022</span><span class="p">,</span>    
+<span class="s1">&#39;g&#39;</span><span class="p">:</span><span class="mf">0.020</span><span class="p">,</span>
+<span class="s1">&#39;h&#39;</span><span class="p">:</span><span class="mf">0.060</span><span class="p">,</span>
+<span class="s1">&#39;i&#39;</span><span class="p">:</span><span class="mf">0.069</span><span class="p">,</span>
+<span class="s1">&#39;j&#39;</span><span class="p">:</span><span class="mf">0.001</span><span class="p">,</span>
+<span class="s1">&#39;k&#39;</span><span class="p">:</span><span class="mf">0.007</span><span class="p">,</span>
+<span class="s1">&#39;l&#39;</span><span class="p">:</span><span class="mf">0.040</span><span class="p">,</span>
+<span class="s1">&#39;m&#39;</span><span class="p">:</span><span class="mf">0.024</span><span class="p">,</span>
+<span class="s1">&#39;n&#39;</span><span class="p">:</span><span class="mf">0.067</span><span class="p">,</span>
+<span class="s1">&#39;o&#39;</span><span class="p">:</span><span class="mf">0.075</span><span class="p">,</span>
+<span class="s1">&#39;p&#39;</span><span class="p">:</span><span class="mf">0.019</span><span class="p">,</span>
+<span class="s1">&#39;q&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="s1">&#39;r&#39;</span><span class="p">:</span><span class="mf">0.059</span><span class="p">,</span>
+<span class="s1">&#39;s&#39;</span><span class="p">:</span><span class="mf">0.063</span><span class="p">,</span>
+<span class="s1">&#39;t&#39;</span><span class="p">:</span><span class="mf">0.090</span><span class="p">,</span>
+<span class="s1">&#39;u&#39;</span><span class="p">:</span><span class="mf">0.027</span><span class="p">,</span>
+<span class="s1">&#39;v&#39;</span><span class="p">:</span><span class="mf">0.009</span><span class="p">,</span>
+<span class="s1">&#39;w&#39;</span><span class="p">:</span><span class="mf">0.023</span><span class="p">,</span>
+<span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="mf">0.001</span><span class="p">,</span>
+<span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="mf">0.019</span><span class="p">,</span>
+<span class="s1">&#39;z&#39;</span><span class="p">:</span><span class="mf">0.00</span><span class="p">,</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -13598,11 +13518,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>And in the continue we define a function for attacking on the vigenere method...</p>
-<p>This methode at first call <t>lenOfkey</t> methode to find the length
- of the key and began finding the characters of key. For this step by 
-step shift the all characters of a sery and calculate its variance, if 
-it near to 0.065(variance of a meaningfull english text in avrage), its 
-shift is true if not next shift</p>
+<p>This methode at first call <t>lenOfkey</t> methode to find the length of the key and began finding the characters of key. For this step by step shift the all characters of a sery and calculate its variance, if it near to 0.065(variance of a meaningfull english text in avrage), its shift is true if not next shift</p>
 
 </div>
 </div>
@@ -13620,7 +13536,7 @@ shift is true if not next shift</p>
         <span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="n">ciphered</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ciphered</span><span class="p">))</span> <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="k">key_len</span> is j]  
         <span class="n">series</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 
-    <span class="n">finallKey</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">finallKey</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">series</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">shift</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">27</span><span class="p">):</span>
             <span class="n">sum1</span> <span class="o">=</span> <span class="mi">0</span>
@@ -13628,13 +13544,13 @@ shift is true if not next shift</p>
                 <span class="n">c</span> <span class="o">=</span> <span class="n">letter</span><span class="o">+</span><span class="n">shift</span>
 
                 <span class="n">charfi</span> <span class="o">=</span> <span class="n">get_char</span><span class="p">(</span><span class="n">c</span> <span class="k">if</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="mi">26</span> <span class="k">else</span> <span class="n">c</span><span class="o">-</span><span class="mi">26</span><span class="p">)</span>
-    <span class="c1">#             print(get_char(letter),':',charfi)</span>
+    <span class="c1">#             print(get_char(letter),&#39;:&#39;,charfi)</span>
 
                 <span class="n">charpi</span> <span class="o">=</span> <span class="n">get_char</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
                 <span class="n">fi</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">charfi</span><span class="p">)</span><span class="o">/</span><span class="n">sery_len</span>
                 <span class="n">pi</span> <span class="o">=</span> <span class="n">freq</span><span class="p">[</span><span class="n">charpi</span><span class="p">]</span>
                 <span class="n">sum1</span> <span class="o">+=</span>  <span class="nb">round</span><span class="p">(</span><span class="n">fi</span><span class="o">*</span><span class="n">pi</span> <span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-    <span class="c1">#         print( charfi , ':' , sum1)</span>
+    <span class="c1">#         print( charfi , &#39;:&#39; , sum1)</span>
 
             <span class="k">if</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">sum1</span><span class="o">-</span><span class="mf">0.065</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.0165</span><span class="p">):</span>
                 <span class="k">break</span>
@@ -13679,7 +13595,7 @@ shift is true if not next shift</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>'salam'</pre>
+<pre>&#39;salam&#39;</pre>
 </div>
 
 </div>
@@ -13707,7 +13623,7 @@ shift is true if not next shift</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="AND-WE-TEST-AGAIN">AND WE TEST AGAIN<a class="anchor-link" href="#AND-WE-TEST-AGAIN">¶</a></h3>
+<h3 id="AND-WE-TEST-AGAIN">AND WE TEST AGAIN<a class="anchor-link" href="#AND-WE-TEST-AGAIN">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13716,11 +13632,11 @@ shift is true if not next shift</p>
 <div class="prompt input_prompt">In&nbsp;[251]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">'Oliphant left the Cavendish Laboratory in  to become the Poynting Professor of Physics at the University of Birmingham. He attempted to build a 60-inch (150 cm) cyclotron at the university, but its completion was postponed by the outbreak of the Second World War in Europe in 1939. He became involved with the development of radar, heading a group at the University of Birmingham that included John Randall and Harry Boot. They created a radical new design, the cavity magnetrozn, that made microwave radar possible. Oliphant also formed part of the MAUD Committee, which reported in July 1941, that an atomic bomb was not only feasible, but might be produced as early as. Oliphant was instrumental in spreading the word of this finding in the United States, thereby starting what became the Manhattan Project. Later in the war, he worked on it with his friend Ernest Lawrence at the Radiation Laboratory in Berkeley, California, developing electromagnetic isotope separation, which provided the fissile component of the Little Boy atomic bomb used in the atomic bombing of Hiroshima in August 1945.After the war, Oliphant returned to Australia as the first Director of the Research School of Physical Sciences and Engineering at the new Australian National University (ANU), where he initiated the design and construction of the worlds largest (500 megajoule) homopolar generator. He retired in 1967, but was appointed Governor of South Australia on the advice of Premier, Don Dunstan. He assisted in the founding of the Australian Democrats political party, and he was the chairman of the meeting in Melbourne in 1977 at which the party was launched. Late in life he watched his wife, Rosa, suffer before her death in 1987, and he became an advocate for voluntary euthanasia. He died in Canberra in 2000.Oliphant left the Cavendish Laboratory in 1937 to become the Poynting Professor of Physics at the University of Birmingham. He attempted to build a 60-inch (150 cm) cyclotron at the university, but its completion was postponed by the outbreak of the Second World War in Europe in . He became involved with the development of radar, heading a group at the University of Birmingham that included John Randall and Harry Boot. They created a radical new design, the cavity magnetron, that made microwave radar possible. Oliphant also formed part of the MAUD Committee, which reported in July , that an atomic bomb was not only feasible, but might be produced as early as . Oliphant was instrumental in spreading the word of this finding in the United States, thereby starting what became the Manhattan Project. Later in the war, he worked on it with his friend Ernest Lawrence at the Radiation Laboratory in Berkeley, California, developing electromagnetic isotope separation, which provided the fissile component of the Little Boy atomic bomb used in the atomic bombing of Hiroshima in August .After the war, Oliphant returned to Australia as the first Director of the Research School of Physical Sciences and Engineering at the new Australian National University (ANU), where he initiated the design and construction of the worlds largest (500 megajoule) homopolar generator. He retired in, but was appointed Governor of South Australia on the advice of Premier, Don Dunstan. He assisted in the founding of the Australian Democrats political party, and he was the chairman of the meeting in Melbourne in at which the party was launched. Late in life he watched his wife, Rosa, suffer before her death in , and he became an advocate for voluntary euthanasia. He died in Canberra in . '</span>
-<span class="n">t</span><span class="o">=</span><span class="s1">''</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Oliphant left the Cavendish Laboratory in  to become the Poynting Professor of Physics at the University of Birmingham. He attempted to build a 60-inch (150 cm) cyclotron at the university, but its completion was postponed by the outbreak of the Second World War in Europe in 1939. He became involved with the development of radar, heading a group at the University of Birmingham that included John Randall and Harry Boot. They created a radical new design, the cavity magnetrozn, that made microwave radar possible. Oliphant also formed part of the MAUD Committee, which reported in July 1941, that an atomic bomb was not only feasible, but might be produced as early as. Oliphant was instrumental in spreading the word of this finding in the United States, thereby starting what became the Manhattan Project. Later in the war, he worked on it with his friend Ernest Lawrence at the Radiation Laboratory in Berkeley, California, developing electromagnetic isotope separation, which provided the fissile component of the Little Boy atomic bomb used in the atomic bombing of Hiroshima in August 1945.After the war, Oliphant returned to Australia as the first Director of the Research School of Physical Sciences and Engineering at the new Australian National University (ANU), where he initiated the design and construction of the worlds largest (500 megajoule) homopolar generator. He retired in 1967, but was appointed Governor of South Australia on the advice of Premier, Don Dunstan. He assisted in the founding of the Australian Democrats political party, and he was the chairman of the meeting in Melbourne in 1977 at which the party was launched. Late in life he watched his wife, Rosa, suffer before her death in 1987, and he became an advocate for voluntary euthanasia. He died in Canberra in 2000.Oliphant left the Cavendish Laboratory in 1937 to become the Poynting Professor of Physics at the University of Birmingham. He attempted to build a 60-inch (150 cm) cyclotron at the university, but its completion was postponed by the outbreak of the Second World War in Europe in . He became involved with the development of radar, heading a group at the University of Birmingham that included John Randall and Harry Boot. They created a radical new design, the cavity magnetron, that made microwave radar possible. Oliphant also formed part of the MAUD Committee, which reported in July , that an atomic bomb was not only feasible, but might be produced as early as . Oliphant was instrumental in spreading the word of this finding in the United States, thereby starting what became the Manhattan Project. Later in the war, he worked on it with his friend Ernest Lawrence at the Radiation Laboratory in Berkeley, California, developing electromagnetic isotope separation, which provided the fissile component of the Little Boy atomic bomb used in the atomic bombing of Hiroshima in August .After the war, Oliphant returned to Australia as the first Director of the Research School of Physical Sciences and Engineering at the new Australian National University (ANU), where he initiated the design and construction of the worlds largest (500 megajoule) homopolar generator. He retired in, but was appointed Governor of South Australia on the advice of Premier, Don Dunstan. He assisted in the founding of the Australian Democrats political party, and he was the chairman of the meeting in Melbourne in at which the party was launched. Late in life he watched his wife, Rosa, suffer before her death in , and he became an advocate for voluntary euthanasia. He died in Canberra in . &#39;</span>
+<span class="n">t</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">):</span>
     <span class="n">t</span><span class="o">+=</span><span class="n">i</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-<span class="n">k</span> <span class="o">=</span> <span class="s1">'salamsalam'</span>
+<span class="n">k</span> <span class="o">=</span> <span class="s1">&#39;salamsalam&#39;</span>
 <span class="n">ciphered</span> <span class="o">=</span> <span class="n">encrypt</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
 </pre></div>
 
@@ -13753,7 +13669,7 @@ shift is true if not next shift</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>'oliphantleftthecavendishlaboratoryintobecomethepoyntingprofessorofphysicsattheuniversityofbirminghamHheattemptedtobuildaPJGinchBKOJcmCcyclotronattheuniversityFbutitscompletionwaspostponedbytheoutbreakofthesecondworldwarineuropeinKSMSHhebecameinvolvedwiththedevelopmentofradarFheadingagroupattheuniversityofbirminghamthatincludedjohnrandallandharrybootHtheycreatedaradicalnewdesignFthecavitymagnetroznFthatmademicrowaveradarpossibleHoliphantalsoformedpartofthemaudcommitteeFwhichreportedinjulyKSNKFthatanatomicbombwasnotonlyfeasibleFbutmightbeproducedasearlyasHoliphantwasinstrumentalinspreadingthewordofthisfindingintheunitedstatesFtherebystartingwhatbecamethemanhattanprojectHlaterinthewarFheworkedonitwithhisfriendernestlawrenceattheradiationlaboratoryinberkeleyFcaliforniaFdevelopingelectromagneticisotopeseparationFwhichprovidedthefissilecomponentofthelittleboyatomicbombusedintheatomicbombingofhiroshimainaugustKSNOHafterthewarFoliphantreturnedtoaustraliaasthefirstdirectoroftheresearchschoolofphysicalsciencesandengineeringatthenewaustraliannationaluniversityBanuCFwhereheinitiatedthedesignandconstructionoftheworldslargestBOJJmegajouleChomopolargeneratorHheretiredinKSPQFbutwasappointedgovernorofsouthaustraliaontheadviceofpremierFdondunstanHheassistedinthefoundingoftheaustraliandemocratspoliticalpartyFandhewasthechairmanofthemeetinginmelbourneinKSQQatwhichthepartywaslaunchedHlateinlifehewatchedhiswifeFrosaFsufferbeforeherdeathinKSRQFandhebecameanadvocateforvoluntaryeuthanasiaHhediedincanberrainLJJJHoliphantleftthecavendishlaboratoryinKSMQtobecomethepoyntingprofessorofphysicsattheuniversityofbirminghamHheattemptedtobuildaPJGinchBKOJcmCcyclotronattheuniversityFbutitscompletionwaspostponedbytheoutbreakofthesecondworldwarineuropeinHhebecameinvolvedwiththedevelopmentofradarFheadingagroupattheuniversityofbirminghamthatincludedjohnrandallandharrybootHtheycreatedaradicalnewdesignFthecavitymagnetronFthatmademicrowaveradarpossibleHoliphantalsoformedpartofthemaudcommitteeFwhichreportedinjulyFthatanatomicbombwasnotonlyfeasibleFbutmightbeproducedasearlyasHoliphantwasinstrumentalinspreadingthewordofthisfindingintheunitedstatesFtherebystartingwhatbecamethemanhattanprojectHlaterinthewarFheworkedonitwithhisfriendernestlawrenceattheradiationlaboratoryinberkeleyFcaliforniaFdevelopingelectromagneticisotopeseparationFwhichprovidedthefissilecomponentofthelittleboyatomicbombusedintheatomicbombingofhiroshimainaugustHafterthewarFoliphantreturnedtoaustraliaasthefirstdirectoroftheresearchschoolofphysicalsciencesandengineeringatthenewaustraliannationaluniversityBanuCFwhereheinitiatedthedesignandconstructionoftheworldslargestBOJJmegajouleChomopolargeneratorHheretiredinFbutwasappointedgovernorofsouthaustraliaontheadviceofpremierFdondunstanHheassistedinthefoundingoftheaustraliandemocratspoliticalpartyFandhewasthechairmanofthemeetinginmelbourneinatwhichthepartywaslaunchedHlateinlifehewatchedhiswifeFrosaFsufferbeforeherdeathinFandhebecameanadvocateforvoluntaryeuthanasiaHhediedincanberrainH'</pre>
+<pre>&#39;oliphantleftthecavendishlaboratoryintobecomethepoyntingprofessorofphysicsattheuniversityofbirminghamHheattemptedtobuildaPJGinchBKOJcmCcyclotronattheuniversityFbutitscompletionwaspostponedbytheoutbreakofthesecondworldwarineuropeinKSMSHhebecameinvolvedwiththedevelopmentofradarFheadingagroupattheuniversityofbirminghamthatincludedjohnrandallandharrybootHtheycreatedaradicalnewdesignFthecavitymagnetroznFthatmademicrowaveradarpossibleHoliphantalsoformedpartofthemaudcommitteeFwhichreportedinjulyKSNKFthatanatomicbombwasnotonlyfeasibleFbutmightbeproducedasearlyasHoliphantwasinstrumentalinspreadingthewordofthisfindingintheunitedstatesFtherebystartingwhatbecamethemanhattanprojectHlaterinthewarFheworkedonitwithhisfriendernestlawrenceattheradiationlaboratoryinberkeleyFcaliforniaFdevelopingelectromagneticisotopeseparationFwhichprovidedthefissilecomponentofthelittleboyatomicbombusedintheatomicbombingofhiroshimainaugustKSNOHafterthewarFoliphantreturnedtoaustraliaasthefirstdirectoroftheresearchschoolofphysicalsciencesandengineeringatthenewaustraliannationaluniversityBanuCFwhereheinitiatedthedesignandconstructionoftheworldslargestBOJJmegajouleChomopolargeneratorHheretiredinKSPQFbutwasappointedgovernorofsouthaustraliaontheadviceofpremierFdondunstanHheassistedinthefoundingoftheaustraliandemocratspoliticalpartyFandhewasthechairmanofthemeetinginmelbourneinKSQQatwhichthepartywaslaunchedHlateinlifehewatchedhiswifeFrosaFsufferbeforeherdeathinKSRQFandhebecameanadvocateforvoluntaryeuthanasiaHhediedincanberrainLJJJHoliphantleftthecavendishlaboratoryinKSMQtobecomethepoyntingprofessorofphysicsattheuniversityofbirminghamHheattemptedtobuildaPJGinchBKOJcmCcyclotronattheuniversityFbutitscompletionwaspostponedbytheoutbreakofthesecondworldwarineuropeinHhebecameinvolvedwiththedevelopmentofradarFheadingagroupattheuniversityofbirminghamthatincludedjohnrandallandharrybootHtheycreatedaradicalnewdesignFthecavitymagnetronFthatmademicrowaveradarpossibleHoliphantalsoformedpartofthemaudcommitteeFwhichreportedinjulyFthatanatomicbombwasnotonlyfeasibleFbutmightbeproducedasearlyasHoliphantwasinstrumentalinspreadingthewordofthisfindingintheunitedstatesFtherebystartingwhatbecamethemanhattanprojectHlaterinthewarFheworkedonitwithhisfriendernestlawrenceattheradiationlaboratoryinberkeleyFcaliforniaFdevelopingelectromagneticisotopeseparationFwhichprovidedthefissilecomponentofthelittleboyatomicbombusedintheatomicbombingofhiroshimainaugustHafterthewarFoliphantreturnedtoaustraliaasthefirstdirectoroftheresearchschoolofphysicalsciencesandengineeringatthenewaustraliannationaluniversityBanuCFwhereheinitiatedthedesignandconstructionoftheworldslargestBOJJmegajouleChomopolargeneratorHheretiredinFbutwasappointedgovernorofsouthaustraliaontheadviceofpremierFdondunstanHheassistedinthefoundingoftheaustraliandemocratspoliticalpartyFandhewasthechairmanofthemeetinginmelbourneinatwhichthepartywaslaunchedHlateinlifehewatchedhiswifeFrosaFsufferbeforeherdeathinFandhebecameanadvocateforvoluntaryeuthanasiaHhediedincanberrainH&#39;</pre>
 </div>
 
 </div>
@@ -13786,7 +13702,7 @@ shift is true if not next shift</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>'oliphantleftthecavendishlaboratoryintobecomethepoyntingprofessorofphysicsattheuniversityofbirmingham.heattemptedtobuilda60-inch(150cm)cyclotronattheuniversity,butitscompletionwaspostponedbytheoutbreakofthesecondworldwarineuropein1939.hebecameinvolvedwiththedevelopmentofradar,headingagroupattheuniversityofbirminghamthatincludedjohnrandallandharryboot.theycreatedaradicalnewdesign,thecavitymagnetrozn,thatmademicrowaveradarpossible.oliphantalsoformedpartofthemaudcommittee,whichreportedinjuly1941,thatanatomicbombwasnotonlyfeasible,butmightbeproducedasearlyas.oliphantwasinstrumentalinspreadingthewordofthisfindingintheunitedstates,therebystartingwhatbecamethemanhattanproject.laterinthewar,heworkedonitwithhisfriendernestlawrenceattheradiationlaboratoryinberkeley,california,developingelectromagneticisotopeseparation,whichprovidedthefissilecomponentofthelittleboyatomicbombusedintheatomicbombingofhiroshimainaugust1945.afterthewar,oliphantreturnedtoaustraliaasthefirstdirectoroftheresearchschoolofphysicalsciencesandengineeringatthenewaustraliannationaluniversity(anu),whereheinitiatedthedesignandconstructionoftheworldslargest(500megajoule)homopolargenerator.heretiredin1967,butwasappointedgovernorofsouthaustraliaontheadviceofpremier,dondunstan.heassistedinthefoundingoftheaustraliandemocratspoliticalparty,andhewasthechairmanofthemeetinginmelbournein1977atwhichthepartywaslaunched.lateinlifehewatchedhiswife,rosa,sufferbeforeherdeathin1987,andhebecameanadvocateforvoluntaryeuthanasia.hediedincanberrain2000.oliphantleftthecavendishlaboratoryin1937tobecomethepoyntingprofessorofphysicsattheuniversityofbirmingham.heattemptedtobuilda60-inch(150cm)cyclotronattheuniversity,butitscompletionwaspostponedbytheoutbreakofthesecondworldwarineuropein.hebecameinvolvedwiththedevelopmentofradar,headingagroupattheuniversityofbirminghamthatincludedjohnrandallandharryboot.theycreatedaradicalnewdesign,thecavitymagnetron,thatmademicrowaveradarpossible.oliphantalsoformedpartofthemaudcommittee,whichreportedinjuly,thatanatomicbombwasnotonlyfeasible,butmightbeproducedasearlyas.oliphantwasinstrumentalinspreadingthewordofthisfindingintheunitedstates,therebystartingwhatbecamethemanhattanproject.laterinthewar,heworkedonitwithhisfriendernestlawrenceattheradiationlaboratoryinberkeley,california,developingelectromagneticisotopeseparation,whichprovidedthefissilecomponentofthelittleboyatomicbombusedintheatomicbombingofhiroshimainaugust.afterthewar,oliphantreturnedtoaustraliaasthefirstdirectoroftheresearchschoolofphysicalsciencesandengineeringatthenewaustraliannationaluniversity(anu),whereheinitiatedthedesignandconstructionoftheworldslargest(500megajoule)homopolargenerator.heretiredin,butwasappointedgovernorofsouthaustraliaontheadviceofpremier,dondunstan.heassistedinthefoundingoftheaustraliandemocratspoliticalparty,andhewasthechairmanofthemeetinginmelbourneinatwhichthepartywaslaunched.lateinlifehewatchedhiswife,rosa,sufferbeforeherdeathin,andhebecameanadvocateforvoluntaryeuthanasia.hediedincanberrain.'</pre>
+<pre>&#39;oliphantleftthecavendishlaboratoryintobecomethepoyntingprofessorofphysicsattheuniversityofbirmingham.heattemptedtobuilda60-inch(150cm)cyclotronattheuniversity,butitscompletionwaspostponedbytheoutbreakofthesecondworldwarineuropein1939.hebecameinvolvedwiththedevelopmentofradar,headingagroupattheuniversityofbirminghamthatincludedjohnrandallandharryboot.theycreatedaradicalnewdesign,thecavitymagnetrozn,thatmademicrowaveradarpossible.oliphantalsoformedpartofthemaudcommittee,whichreportedinjuly1941,thatanatomicbombwasnotonlyfeasible,butmightbeproducedasearlyas.oliphantwasinstrumentalinspreadingthewordofthisfindingintheunitedstates,therebystartingwhatbecamethemanhattanproject.laterinthewar,heworkedonitwithhisfriendernestlawrenceattheradiationlaboratoryinberkeley,california,developingelectromagneticisotopeseparation,whichprovidedthefissilecomponentofthelittleboyatomicbombusedintheatomicbombingofhiroshimainaugust1945.afterthewar,oliphantreturnedtoaustraliaasthefirstdirectoroftheresearchschoolofphysicalsciencesandengineeringatthenewaustraliannationaluniversity(anu),whereheinitiatedthedesignandconstructionoftheworldslargest(500megajoule)homopolargenerator.heretiredin1967,butwasappointedgovernorofsouthaustraliaontheadviceofpremier,dondunstan.heassistedinthefoundingoftheaustraliandemocratspoliticalparty,andhewasthechairmanofthemeetinginmelbournein1977atwhichthepartywaslaunched.lateinlifehewatchedhiswife,rosa,sufferbeforeherdeathin1987,andhebecameanadvocateforvoluntaryeuthanasia.hediedincanberrain2000.oliphantleftthecavendishlaboratoryin1937tobecomethepoyntingprofessorofphysicsattheuniversityofbirmingham.heattemptedtobuilda60-inch(150cm)cyclotronattheuniversity,butitscompletionwaspostponedbytheoutbreakofthesecondworldwarineuropein.hebecameinvolvedwiththedevelopmentofradar,headingagroupattheuniversityofbirminghamthatincludedjohnrandallandharryboot.theycreatedaradicalnewdesign,thecavitymagnetron,thatmademicrowaveradarpossible.oliphantalsoformedpartofthemaudcommittee,whichreportedinjuly,thatanatomicbombwasnotonlyfeasible,butmightbeproducedasearlyas.oliphantwasinstrumentalinspreadingthewordofthisfindingintheunitedstates,therebystartingwhatbecamethemanhattanproject.laterinthewar,heworkedonitwithhisfriendernestlawrenceattheradiationlaboratoryinberkeley,california,developingelectromagneticisotopeseparation,whichprovidedthefissilecomponentofthelittleboyatomicbombusedintheatomicbombingofhiroshimainaugust.afterthewar,oliphantreturnedtoaustraliaasthefirstdirectoroftheresearchschoolofphysicalsciencesandengineeringatthenewaustraliannationaluniversity(anu),whereheinitiatedthedesignandconstructionoftheworldslargest(500megajoule)homopolargenerator.heretiredin,butwasappointedgovernorofsouthaustraliaontheadviceofpremier,dondunstan.heassistedinthefoundingoftheaustraliandemocratspoliticalparty,andhewasthechairmanofthemeetinginmelbourneinatwhichthepartywaslaunched.lateinlifehewatchedhiswife,rosa,sufferbeforeherdeathin,andhebecameanadvocateforvoluntaryeuthanasia.hediedincanberrain.&#39;</pre>
 </div>
 
 </div>
@@ -13810,10 +13726,9 @@ shift is true if not next shift</p>
 </div>
     </div>
   </div>
-
+</body>
 
  
 
 
-
-</body></html>
+</html>
